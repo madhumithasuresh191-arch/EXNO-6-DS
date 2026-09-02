@@ -86,13 +86,129 @@ df
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160130" src="https://github.com/user-attachments/assets/f9dd37d1-73d0-48d4-a10f-3334928ea916" />
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160144" src="https://github.com/user-attachments/assets/7aa4d4f3-9597-45b2-b782-94a478a0f0b2" />
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160153" src="https://github.com/user-attachments/assets/5876af29-1581-4048-8781-3685666f3716" />
+
+~~~
+import seaborn as sns
+import matplotlib.pyplot as plt
+sns.set_theme(style="whitegrid")
+~~~
+
+
+
+~~~
+sns.countplot(data=df, x='Product',hue='Category')
+plt.title('Number of Orders by Product with category Differentaition')
+plt.show()
+~~~
+
+
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160206" src="https://github.com/user-attachments/assets/9849f7ef-839e-4019-8ba7-e12a037dc578" />
+
+
+~~~
+sns.barplot(data=df,x='Product',y='Sales')
+plt.title('Average Sales by Product')
+plt.show()
+~~~
+
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160215" src="https://github.com/user-attachments/assets/98b0a4f2-13a5-4c77-811f-be8e8ac40b2d" />
+
+
+
+~~~
+sns.lineplot(data=df,x='Month',y='Sales',hue='Product',marker='o')
+plt.title('Monthly Sales by Product')
+plt.show()
+~~~
+
+
+
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160226" src="https://github.com/user-attachments/assets/ad1287e9-dd3e-4185-96ef-2d47b0e0fe18" />
+
+
+~~~
+sns.barplot(data=df,x='Sales',y='Region')
+plt.title('Average Sales by Region')
+plt.show()
+~~~
+
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160235" src="https://github.com/user-attachments/assets/18dc7af4-4609-46a5-b197-85dc684061cf" />
+
+
+
+~~~
+sns.scatterplot(
+    data=df,
+    x='Advertising',
+    y='Sales'
+
+)
+plt.title('Adervertising vs Sales')
+plt.show()
+~~~
+
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160245" src="https://github.com/user-attachments/assets/319a3baa-d5aa-4e60-b746-7a3dd6322f5e" />
+
+
+
+~~~
+sns.scatterplot(
+    data=df,
+    x='Advertising',
+    y='Sales',
+    hue='Product',
+    size='Profit'
+
+)
+plt.title('Advertising vs Sales')
+plt.show()
+~~~
+
+
+
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160300" src="https://github.com/user-attachments/assets/b89b1789-d14e-42a3-b4b3-84d6b22e95b3" />
+
+
+~~~
+sns.histplot(
+    data=df,
+    x='Sales',
+    bins=8
+)
+plt.title('Sales Distribution')
+plt.show()
+~~~
+
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160309" src="https://github.com/user-attachments/assets/541002a3-98a8-4578-834b-2ab7d789519b" />
+
+
+
+~~~
+sns.histplot(
+    data=df,
+    x='Sales',
+    bins=8,
+    kde=True
+)
+plt.title('Sales Distribution with kde')
+plt.show()
+~~~
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160318" src="https://github.com/user-attachments/assets/50599c51-4bd9-4a58-a78f-b972bb6f57de" />
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160328" src="https://github.com/user-attachments/assets/836385fb-1674-4812-ba97-4a82db104b0b" />
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160336" src="https://github.com/user-attachments/assets/017a71b6-30a7-4e23-acfd-71500b5bfb67" />
