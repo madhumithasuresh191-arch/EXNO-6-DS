@@ -210,12 +210,114 @@ plt.show()
 
 
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160318" src="https://github.com/user-attachments/assets/50599c51-4bd9-4a58-a78f-b972bb6f57de" />
+
+
+
+~~~
+sns.boxplot(
+    data=df,
+    x='Product',
+    y='Sales'
+)
+plt.title('Sales distribution by Product')
+plt.show()
+
+~~~
+
+
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160328" src="https://github.com/user-attachments/assets/836385fb-1674-4812-ba97-4a82db104b0b" />
+
+
+
+~~~
+sns.violinplot(
+    data=df,
+    x='Product',
+    y='Sales'
+)
+plt.title('Sales distribution by Product')
+plt.show()
+~~~
+
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160336" src="https://github.com/user-attachments/assets/017a71b6-30a7-4e23-acfd-71500b5bfb67" />
+
+
+
+~~~
+sns.stripplot(
+    data=df,
+    x='Product',
+    y='Sales'
+    
+)
+plt.title('Sales distribution by Product')
+plt.show()
+~~~
+
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160344" src="https://github.com/user-attachments/assets/a16faeb2-86a9-4520-b8b2-f110828a8e57" />
+
+
+
+~~~
+sns.swarmplot(
+    data=df,
+    x='Product',
+    y='Sales'
+    
+)
+plt.title('Sales distribution by Product')
+plt.show()
+~~~
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160354" src="https://github.com/user-attachments/assets/97c358d4-3b46-48f2-9e66-281de2f65807" />
+
+
+
+~~~
+corr=df[
+    ['Quantity','Unit_Price','Sales','Profit','Advertising']
+
+].corr()
+corr
+~~~
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160403" src="https://github.com/user-attachments/assets/57dd4167-f972-4f64-bd22-58e78b082272" />
+
+
+~~~
+sns.heatmap(
+    corr,
+    annot=True,
+    cmap='coolwarm'
+)
+plt.title('Correlation Heatmap')
+plt.show()
+~~~
+
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160412" src="https://github.com/user-attachments/assets/0f1cac28-7b2a-4e5f-a162-d21c08bb9588" />
+
+
+
+~~~
+sns.pairplot(
+    df[
+        ['Quantity','Unit_Price','Sales','Profit','Advertising']
+    ]
+)
+plt.show()
+~~~
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160422" src="https://github.com/user-attachments/assets/d940dd36-bbd3-4d72-ba26-976058edb438" />
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160432" src="https://github.com/user-attachments/assets/fa9c5adb-cda6-4e6a-90af-17ce885686a6" />
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160445" src="https://github.com/user-attachments/assets/7f3d44cc-0c46-443a-9689-8dfb70e08d9d" />
