@@ -320,9 +320,38 @@ plt.show()
 
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160422" src="https://github.com/user-attachments/assets/d940dd36-bbd3-4d72-ba26-976058edb438" />
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160432" src="https://github.com/user-attachments/assets/fa9c5adb-cda6-4e6a-90af-17ce885686a6" />
+
+
+~~~
+sns.pairplot(
+    df[
+        ['Quantity','Unit_Price','Sales','Profit','Advertising','Product']
+    ],
+    hue='Product'
+)
+plt.show()
+~~~
+
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160445" src="https://github.com/user-attachments/assets/7f3d44cc-0c46-443a-9689-8dfb70e08d9d" />
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160457" src="https://github.com/user-attachments/assets/d4dd6bb3-23cc-4d6b-ab70-c44194fc4e0d" />
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160522" src="https://github.com/user-attachments/assets/2ea4cf0d-506a-4ce8-bf8a-b5315f7a3b1b" />
+
+
+~~~
+sns.jointplot(
+    data=df,
+    x='Advertising',
+    y='Sales',
+    kind='scatter'
+)
+plt.show()
+
+~~~
+
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160535" src="https://github.com/user-attachments/assets/54c81fb8-6ddd-4117-9459-235d19e0a539" />
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160550" src="https://github.com/user-attachments/assets/32718bbc-1d7e-46fc-a632-6b0855637558" />
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160559" src="https://github.com/user-attachments/assets/fa7eb838-a0f7-48ff-9a3f-153bc5b3a9e5" />
