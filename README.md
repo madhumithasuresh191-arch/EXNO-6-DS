@@ -1,5 +1,6 @@
 # EXNO-6-DS-DATA VISUALIZATION USING SEABORN LIBRARY
-
+## Name: S Madhumitha
+## Reg No:212225040217
 # Aim:
   To Perform Data Visualization using seaborn python library for the given datas.
 
@@ -353,13 +354,91 @@ plt.show()
 
 
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160535" src="https://github.com/user-attachments/assets/54c81fb8-6ddd-4117-9459-235d19e0a539" />
+
+
+~~~
+sns.jointplot(
+    data=df,
+    x='Advertising',
+    y='Sales',
+    kind='reg'
+)
+plt.show()
+~~~
+
+
+
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160550" src="https://github.com/user-attachments/assets/32718bbc-1d7e-46fc-a632-6b0855637558" />
+
+
+
+~~~
+sns.regplot(
+    data=df,
+    x='Advertising',
+    y='Sales'
+)
+plt.title('Advertising vs sales')
+plt.show()
+~~~
+
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160559" src="https://github.com/user-attachments/assets/fa7eb838-a0f7-48ff-9a3f-153bc5b3a9e5" />
+
+
+~~~
+sns.catplot(
+    data=df,
+    x='Product',
+    y='Sales',
+    kind='box'
+)
+plt.show()
+~~~
+
+
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160608" src="https://github.com/user-attachments/assets/4c7680a5-ece3-4e57-8c66-9236421c475d" />
+
+
+
+~~~
+sns.catplot(
+    data=df,
+    x='Product',
+    y='Sales',
+    kind='violin'
+)
+plt.show()
+~~~
+
+
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160617" src="https://github.com/user-attachments/assets/b32a04cd-3440-4735-92c1-61d87ab09758" />
+
+
+
+~~~
+g=sns.FacetGrid(
+    df,
+    col='Region'
+)
+g.map_dataframe(
+    sns.scatterplot,
+    x='Advertising',
+    y='Sales'
+)
+plt.show()
+
+~~~
 <img width="1920" height="1020" alt="Screenshot 2026-09-02 160625" src="https://github.com/user-attachments/assets/fa0ca1fb-6c90-4052-a542-c666e6c57930" />
 
 
 
 # Result:
- Include your result here
+ Data visualization was successfully performed using the Seaborn Python library
+
+
